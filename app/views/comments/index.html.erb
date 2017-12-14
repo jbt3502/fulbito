@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Comentarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Local</th>
+      <th>Comentario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @comments.each do |comment| %>
+      <tr>
+        <td><%= comment.local.nombre %></td>
+        <td><%= comment.comentario %></td>
+        <td><%= link_to 'Editar', edit_comment_path(comment) %></td>
+        <td><%= link_to 'Eliminar', comment, method: :delete, data: { confirm: 'Estas seguro de eliminar el registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nuevo Comentario', new_comment_path %>

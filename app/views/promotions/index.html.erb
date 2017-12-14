@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Promociones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Local</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @promotions.each do |promotion| %>
+      <tr>
+        <td><%= promotion.local.nombre %></td>
+        <td><%= promotion.descripcion %></td>
+        <td><%= link_to 'Editar', edit_promotion_path(promotion) %></td>
+        <td><%= link_to 'Eliminar', promotion, method: :delete, data: { confirm: 'Esta seguro de eliminar el registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Promocion', new_promotion_path %>

@@ -1,0 +1,32 @@
+<%= form_with(model: rating, local: true) do |form| %>
+  <% if rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(rating.errors.count, "error") %> prohibited this rating from being saved:</h2>
+
+      <ul>
+      <% rating.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :local_id %>
+    <%= form.collection_select(:local_id , Local.all, :id, :nombre) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :calificacion %>
+    <%= form.number_field :calificacion, id: :rating_calificacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :rating_descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Enviar datos' %>
+  </div>
+<% end %>

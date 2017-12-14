@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @field.local %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @field.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @field.descripcion %>
+</p>
+
+<p>
+  <strong>Tarifa:</strong>
+  <%= @field.tarifa %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @field.foto %>
+</p>
+
+<%= link_to 'Editar', edit_field_path(@field) %> |
+<%= link_to 'Regresar', fields_path %>

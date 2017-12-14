@@ -1,0 +1,42 @@
+<%= form_with(model: field_rent, local: true) do |form| %>
+  <% if field_rent.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(field_rent.errors.count, "error") %> prohibited this field_rent from being saved:</h2>
+
+      <ul>
+      <% field_rent.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :field_id %>
+    <%= form.text_field :field_id, id: :field_rent_field_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_id %>
+    <%= form.text_field :service_id, id: :field_rent_service_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha, id: :field_rent_fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora %>
+    <%= form.time_select :hora, id: :field_rent_hora %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :field_rent_descripcion %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

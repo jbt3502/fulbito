@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @comment.local %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @comment.comentario %>
+</p>
+
+<%= link_to 'Editar', edit_comment_path(@comment) %> |
+<%= link_to 'Regresar', comments_path %>

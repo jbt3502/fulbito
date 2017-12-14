@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Field Rents</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Field</th>
+      <th>Service</th>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @field_rents.each do |field_rent| %>
+      <tr>
+        <td><%= field_rent.field %></td>
+        <td><%= field_rent.service %></td>
+        <td><%= field_rent.fecha %></td>
+        <td><%= field_rent.hora %></td>
+        <td><%= field_rent.descripcion %></td>
+        <td><%= link_to 'Show', field_rent %></td>
+        <td><%= link_to 'Edit', edit_field_rent_path(field_rent) %></td>
+        <td><%= link_to 'Destroy', field_rent, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Field Rent', new_field_rent_path %>

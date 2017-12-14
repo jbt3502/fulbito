@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Field:</strong>
+  <%= @field_rent.field %>
+</p>
+
+<p>
+  <strong>Service:</strong>
+  <%= @field_rent.service %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @field_rent.fecha %>
+</p>
+
+<p>
+  <strong>Hora:</strong>
+  <%= @field_rent.hora %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @field_rent.descripcion %>
+</p>
+
+<%= link_to 'Edit', edit_field_rent_path(@field_rent) %> |
+<%= link_to 'Back', field_rents_path %>

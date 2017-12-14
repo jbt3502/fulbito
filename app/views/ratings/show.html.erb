@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @rating.local.nombre %>
+</p>
+
+<p>
+  <strong>Calificacion:</strong>
+  <%= @rating.calificacion %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @rating.descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_rating_path(@rating) %> |
+<%= link_to 'Regresar', ratings_path %>

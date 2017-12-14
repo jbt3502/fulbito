@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Canchas Deportivas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Local</th>
+      <th>Nombre</th>
+      <th>Descripcion</th>
+      <th>Tarifa</th>
+      <th>Foto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fields.each do |field| %>
+      <tr>
+        <td><%= field.local.nombre %></td>
+        <td><%= field.nombre %></td>
+        <td><%= field.descripcion %></td>
+        <td><%= field.tarifa %></td>
+        <td><%= field.foto %></td>
+        <td><%= link_to 'Editar', edit_field_path(field) %></td>
+        <td><%= link_to 'Eliminar', field, method: :delete, data: { confirm: 'Estas seguro de eliminar el registro?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Cancha', new_field_path %>

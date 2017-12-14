@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  field: one
+  service: one
+  fecha: 2017-12-13
+  hora: 2017-12-13 10:36:28
+  descripcion: MyString
+
+two:
+  field: two
+  service: two
+  fecha: 2017-12-13
+  hora: 2017-12-13 10:36:28
+  descripcion: MyString

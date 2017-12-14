@@ -1,0 +1,42 @@
+<%= form_with(model: field, local: true) do |form| %>
+  <% if field.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(field.errors.count, "error") %> prohibited this field from being saved:</h2>
+
+      <ul>
+      <% field.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :local_id, 'local' %>
+    <%= form.collection_select(:local_id , Local.all, :id, :nombre) %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :field_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :field_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tarifa %>
+    <%= form.text_field :tarifa, id: :field_tarifa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto %>
+    <%= form.text_field :foto, id: :field_foto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit 'Enviar datos' %>
+  </div>
+<% end %>

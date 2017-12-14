@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  local: one
+  calificacion: 1
+  descripcion: MyString
+
+two:
+  local: two
+  calificacion: 1
+  descripcion: MyString

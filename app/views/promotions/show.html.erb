@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @promotion.local.nombre %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @promotion.descripcion %>
+</p>
+
+<%= link_to 'Editar', edit_promotion_path(@promotion) %> |
+<%= link_to 'Eliminar', promotions_path %>
